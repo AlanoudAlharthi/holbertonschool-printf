@@ -5,7 +5,7 @@
  * @format: character string with directives
  *
  * Return: number of characters printed (excluding null byte),
- *         or -1 if error
+ * or -1 if error
  */
 int _printf(const char *format, ...)
 {
@@ -23,11 +23,12 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (!format[i]) /* case: % at end of string */
+			if (!format[i])
 				return (-1);
-
 			if (format[i] == 'c')
+			{
 				count += _putchar(va_arg(args, int));
+			}
 			else if (format[i] == 's')
 			{
 				str = va_arg(args, char *);
@@ -37,16 +38,19 @@ int _printf(const char *format, ...)
 					count += _putchar(*str++);
 			}
 			else if (format[i] == '%')
+			{
 				count += _putchar('%');
+			}
 			else
 			{
-				/* unknown specifier → print as is */
 				count += _putchar('%');
 				count += _putchar(format[i]);
 			}
 		}
 		else
+		{
 			count += _putchar(format[i]);
+		}
 		i++;
 	}
 
