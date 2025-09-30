@@ -11,6 +11,7 @@ int handle_specifier(char c, va_list args)
 {
 	if (c == 'c')
 		return (_putchar(va_arg(args, int)));
+
 	if (c == 's')
 	{
 		char *str = va_arg(args, char *);
@@ -22,12 +23,14 @@ int handle_specifier(char c, va_list args)
 			count += _putchar(*str++);
 		return (count);
 	}
+
 	if (c == '%')
 		return (_putchar('%'));
 
-	/* Unknown specifier */
+	/* Unknown specifier: print '%' and the character */
 	_putchar('%');
-	return (_putchar(c));
+	_putchar(c);
+	return (2);
 }
 
 /**
