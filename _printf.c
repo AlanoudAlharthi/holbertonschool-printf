@@ -41,6 +41,14 @@ int handle_specifier(char c, va_list args)
 		count += _putchar('%');
 	else if (c == 'b')
 		count += print_binary(va_arg(args, unsigned long int));
+	else if (c == 'u')
+		count += print_unsigned(va_arg(args, unsigned int));
+	else if (c == 'o')
+		count += print_octal(va_arg(args, unsigned int));
+	else if (c == 'x')
+		count += print_hex(va_arg(args, unsigned int), 0);
+	else if (c == 'X')
+		count += print_hex(va_arg(args, unsigned int), 1);
 	else
 	{
 		count += _putchar('%');
