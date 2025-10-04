@@ -11,6 +11,6 @@ int _putchar(char c);
 /* Print helpers */
 int print_int(int n);
 int print_string(char *s);
-int print_binary(unsigned int n);
+int print_binary(unsigned long int n);
 
 #endif /* MAIN_H */

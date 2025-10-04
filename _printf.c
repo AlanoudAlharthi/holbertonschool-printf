@@ -12,11 +12,13 @@ int print_string(char *s)
 
 	if (s == NULL)
 		s = "(null)";
+
 	while (*s)
 	{
 		count += _putchar(*s);
 		s++;
 	}
+
 	return (count);
 }
 
@@ -38,12 +40,13 @@ int handle_specifier(char c, va_list args)
 	else if (c == '%')
 		count += _putchar('%');
 	else if (c == 'b')
-		count += print_binary(va_arg(args, unsigned int));
+		count += print_binary(va_arg(args, unsigned long int));
 	else
 	{
 		count += _putchar('%');
 		count += _putchar(c);
 	}
+
 	return (count);
 }
 
