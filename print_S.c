@@ -2,9 +2,6 @@
 
 /**
  * print_S - prints a string, replacing non-printable chars with \xHH
- * @str: string to print
- *
- * Return: number of characters printed
  */
 int print_S(const char *str)
 {

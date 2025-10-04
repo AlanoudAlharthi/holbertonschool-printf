@@ -2,12 +2,11 @@
 #define MAIN_H
 
 #include <stdarg.h>
-#include <stdio.h>
 
-/* _putchar writes a single character to stdout */
+/* _putchar writes a character to stdout */
 int _putchar(char c);
 
-/* _printf - our custom printf function */
+/* _printf - custom printf function */
 int _printf(const char *format, ...);
 
 /* print_S - prints a string with non-printable characters as \xHH */
