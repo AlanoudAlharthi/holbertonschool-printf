@@ -1,15 +1,13 @@
 #include "main.h"
+#include <unistd.h>
 
 /**
- * _putchar - writes a single character directly to stdout
+ * _putchar - writes the character c to stdout
  * @c: The character to print
  *
- * Return: 1 on success, -1 on error
- *
- * Note: Normally, _printf uses print_buffer() instead of _putchar()
- * to minimize write() calls. This function remains for compatibility.
+ * Return: 1 on success
  */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+    return write(1, &c, 1);
 }

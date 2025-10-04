@@ -2,21 +2,15 @@
 #define MAIN_H
 
 #include <stdarg.h>
-#include <unistd.h>
+#include <stdio.h>
 
-/* ========= Core functions ========= */
-int _printf(const char *format, ...);
+/* _putchar writes a single character to stdout */
 int _putchar(char c);
 
-/* ========= Buffer management ========= */
-void print_buffer(char *buffer, int *index, char c);
+/* _printf - our custom printf function */
+int _printf(const char *format, ...);
 
-/* ========= Print helpers ========= */
-int print_int(int n);
-int print_string(char *s, char *buffer, int *index);
-int print_binary(unsigned long int n);
-int print_unsigned(unsigned int n);
-int print_octal(unsigned int n);
-int print_hex(unsigned int n, int uppercase);
+/* print_S - prints a string with non-printable characters as \xHH */
+int print_S(const char *str);
 
 #endif /* MAIN_H */
