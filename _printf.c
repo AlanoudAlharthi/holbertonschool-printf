@@ -37,6 +37,8 @@ int handle_specifier(char c, va_list args)
 		count += print_string(va_arg(args, char *));
 	else if (c == '%')
 		count += _putchar('%');
+	else if (c == 'b')
+		count += print_binary(va_arg(args, unsigned int));
 	else
 	{
 		count += _putchar('%');
